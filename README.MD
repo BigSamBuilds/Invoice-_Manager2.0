@@ -15,7 +15,7 @@ The **Invoice Management Program** is a robust and efficient solution designed t
 ## Technical Details
 
 - **Language**: C++
-- **Development Environment**: [Specify any IDE or tools used, e.g., QT Stadio, Code::Blocks]
+- **Development Environment**: Qt Creator
 - **Version Control**: Managed using Git for efficient collaboration and version tracking.
 
 ## Project Highlights
@@ -29,22 +29,44 @@ The **Invoice Management Program** is a robust and efficient solution designed t
 
 To get started with the Invoice Management Program, follow these steps:
 
+### Running with Qt Creator
+
 1. **Clone the Repository**:
    ```bash
    git clone git@github.com:BigSamBuilds/Invoice-_Manager2.0.git
    ```
 
-2. **Navigate to the Project Directory**:
+2. **Open Qt Creator**:
+   - Launch Qt Creator on your machine.
+
+3. **Open the Project**:
+   - Click on "File" > "Open File or Project..."
+   - Navigate to the cloned repository and select the `.pro` file (if available) or the main source file (e.g., `main.cpp`).
+
+4. **Configure the Project**:
+   - If prompted, configure the project settings (e.g., build kits). Ensure you have the necessary Qt libraries installed.
+
+5. **Build the Project**:
+   - Click on the "Build" button (hammer icon) or press `Ctrl + B` to compile the project.
+
+6. **Run the Program**:
+   - Click on the "Run" button (green play icon) or press `Ctrl + R` to execute the program.
+
+### Running from Command Line
+
+If you prefer to run the program from the command line, follow these steps:
+
+1. **Navigate to the Project Directory**:
    ```bash
-   cd invoice-management
+   cd /path/to/your/repo  # Replace with your repository path
    ```
 
-3. **Compile the Program**:
+2. **Compile the Program**:
    ```bash
    g++ -o invoice_management main.cpp
    ```
 
-4. **Run the Program**:
+3. **Run the Program**:
    ```bash
    ./invoice_management
    ```
