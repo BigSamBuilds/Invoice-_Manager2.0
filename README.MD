@@ -2,7 +2,7 @@
 
 ## Overview
 
-The **Invoice Management Program** is a robust and efficient solution designed to streamline the invoicing process for businesses. Developed in C++, this program was tailored specifically for **Stitchs**, a client based in England, to meet their unique invoicing requirements. With a focus on user experience and functionality, this program enhances productivity and accuracy in managing invoices.
+The **Invoice Management Program** is a robust and efficient solution designed to streamline the invoicing process for businesses. Developed in C++, this program was tailored specifically for **Sitchs**, a client based in England, to meet their unique invoicing requirements. With a focus on user experience and functionality, this program enhances productivity and accuracy in managing invoices.
 
 ## Key Features
 
