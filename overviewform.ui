@@ -1,0 +1,2969 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OverviewForm</class>
+ <widget class="QWidget" name="OverviewForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1578</width>
+    <height>1151</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2d2d2d; color: white;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="OverviewsPageLabel_2">
+       <property name="styleSheet">
+        <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+       </property>
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="OverviewRefreshButton_2">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-bottom: 2px solid white; /* White left border */
+}</string>
+       </property>
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="styleSheet">
+      <string notr="true">QScrollBar:vertical, QScrollBar:horizontal {
+                                                                            border: none;
+                                                                            background: rgba(255, 255, 255, 0);
+                                                                            width: 14px;
+                                                                            margin: 15px 0 15px 0;
+                                                                            border-radius: 0px;
+
+                                                                        }
+
+                                                                        /*  HANDLE BAR VERTICAL */
+                                                                        QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+                                                                            background-color: rgba(255, 255, 255, 0.472);
+                                                                            min-height: 30px;
+                                                                            border-radius: 7px;
+
+                                                                        }
+
+                                                                        QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+                                                                            background-color: rgba(255, 255, 255, 0.732);
+                                                                        }
+
+                                                                        QScrollBar::handle:vertical:pressed, QScrollBar::handle:horizontal:pressed {
+                                                                            background-color: rgba(255, 255, 255, 0.767);
+                                                                        }
+
+                                                                        /* BTN TOP - SCROLLBAR */
+                                                                        QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
+                                                                            border: none;
+                                                                            background-color: rgba(255, 255, 255, 0);
+                                                                            height: 15px;
+                                                                            border-top-left-radius: 7px;
+                                                                            border-top-right-radius: 7px;
+                                                                            subcontrol-position: top;
+                                                                            subcontrol-origin: margin;
+                                                                        }
+
+                                                                        QScrollBar::sub-line:vertical:hover, QScrollBar::sub-line:horizontal:hover {
+                                                                            background-color: rgba(255, 255, 255, 0.458);
+                                                                        }
+
+                                                                        QScrollBar::sub-line:vertical:pressed, QScrollBar::sub-line:horizontal:pressed {
+                                                                            background-color: rgba(255, 255, 255, 0.46);
+                                                                        }
+
+                                                                        /* BTN BOTTOM - SCROLLBAR */
+                                                                        QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal {
+                                                                            border: none;
+                                                                            background-color: rgba(255, 255, 255, 0);
+                                                                            height: 15px;
+                                                                            border-bottom-left-radius: 7px;
+                                                                            border-bottom-right-radius: 7px;
+                                                                            subcontrol-position: bottom;
+                                                                            subcontrol-origin: margin;
+                                                                        }
+
+                                                                        QScrollBar::add-line:vertical:hover, QScrollBar::add-line:horizontal:hover {
+                                                                            background-color: rgba(255, 255, 255, 0.46);
+                                                                        }
+
+                                                                        QScrollBar::add-line:vertical:pressed, QScrollBar::add-line:horizontal:pressed {
+                                                                            background-color: rgba(255, 255, 255, 0.434);
+                                                                        }
+
+                                                                        /* RESET ARROW */
+                                                                        QScrollBar::up-arrow:vertical,
+                                                                        QScrollBar::down-arrow:vertical,
+                                                                        QScrollBar::up-arrow:horizontal,
+                                                                        QScrollBar::down-arrow:horizontal {
+                                                                            background: none;
+                                                                        }
+
+                                                                        QScrollBar::add-page:vertical,
+                                                                        QScrollBar::sub-page:vertical,
+                                                                        QScrollBar::add-page:horizontal,
+                                                                        QScrollBar::sub-page:horizontal {
+                                                                            background: none;
+                                                                        }
+                                                                </string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>-344</y>
+        <width>1564</width>
+        <height>1434</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="qhboxlaoutPag0Status">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <item row="1" column="2">
+          <widget class="QWidget" name="InvoicesStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNInvoices">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Invoices</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/Documents.png</normaloff>:/images/icons/Documents.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_13">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_27">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="InvoicesTotalStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Invoices:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_28">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="InvoicesRecentRegister">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Register:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="line_14">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_19">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_29">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="InvoicesNoteLabel">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Note</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="InvoicesPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="InvoicesAddNewInvoice">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Add New Invoice</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QWidget" name="ItemsStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <property name="spacing">
+             <number>6</number>
+            </property>
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNStatus">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Items</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/Items.png</normaloff>:/images/icons/Items.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_2">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="ItemsStatusTotalItems">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Items: </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_13">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="ItemsStatusDate">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Registered Item</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_14">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="ItemsStatusLastBought">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Bought Items:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_9">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="ItemsNoteLabel">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Note</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="ItemsPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="ItemsAddNew">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Add New Item</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QWidget" name="DocumentsStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>500</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNStatus_2">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Documents</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/Documents.png</normaloff>:/images/icons/Documents.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="styleSheet">
+               <string notr="true">background-color:white;
+</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="DocumentStatusTotalDocs">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Documents: </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_2">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="DocumentsStatusSize">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Documents Size (MB): </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_6">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="DocumentsStatusLastDate">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Document: </string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_8">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_5">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="DocumentsNoteLabel">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Note</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="DocumentsPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::NoFrame</enum>
+                </property>
+                <property name="documentTitle">
+                 <string/>
+                </property>
+                <property name="plainText">
+                 <string/>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_3">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="DocumentsView">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Manage Documents</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QWidget" name="PaymentOutStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>500</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNPaymentsOut">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Payments Out</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/payment.png</normaloff>:/images/icons/payment.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_4">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_18">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="PaymentsOutStatusQuantities">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Number Of Payments</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsOutStatusPendings">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Number Of Pending</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_2">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+</string>
+                </property>
+                <property name="text">
+                 <string>Number of Fulfilled</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_20">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="PaymentsOutNumberOfPayments">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsOutNumberOfPending">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsOutNumberOfFulfilled">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_5">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>3</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="PaymentsOutMonthly_2">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Monthly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_23">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="PaymentsOutPreviewsMonth">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&lt;&lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="PaymentsOutMonthlyStatus">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Monthly Report:</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="PaymentsOutNextMonth">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&gt;&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_6">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>5</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="PaymentsOutYearly">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Yearly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_24">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="PaymentsOutPreviewsYear">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&lt;&lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="PaymentsOutYearlyStatus">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Yearly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="PaymentsOutNextYear">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&gt;&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_12">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_16">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="PaymentsOutNoteLabel">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Note</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="PaymentsOutPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="PaymentsOutAddNewPay">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Add New Payment</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QWidget" name="VendorsStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>300</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Vendors</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/Vendors.png</normaloff>:/images/icons/Vendors.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_3">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_15">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="vendorsTotalStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Vendors:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="VendorsStatusDate">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Registred Vendor:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_17">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="VendorsStatusLastOrder">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Recent Ordered Item From:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_10">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_10">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="VendorsNoteLabel">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Note</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="VendorsPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_6">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="VendorsNewVendor">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Manage Vendors</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QWidget" name="CustomersStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>400</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNCustomers">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Customers</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/Vendors.png</normaloff>:/images/icons/Vendors.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_7">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;
+</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_25">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="CustomersTotalStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Total Customers:</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="Line" name="line_11">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_17">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="CustomersNoteLabel">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Note</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="CustomersPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_10">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_5">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="CustomersManageCustomer">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Manage Customers</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QWidget" name="PaymentInStatus" native="true">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>500</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>1000</height>
+            </size>
+           </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QWidget {
+    background-color:  rgb(108, 109, 110);
+    border-radius: 5px;
+}
+
+QWidget:hover {
+
+    background-color: rgb(89, 90, 91);
+
+}</string>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <property name="leftMargin">
+             <number>2</number>
+            </property>
+            <property name="topMargin">
+             <number>2</number>
+            </property>
+            <property name="rightMargin">
+             <number>2</number>
+            </property>
+            <property name="bottomMargin">
+             <number>2</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="BTNPaymentsIn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton{
+    background-color: transparent;
+        background: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}</string>
+              </property>
+              <property name="text">
+               <string>Payments in</string>
+              </property>
+              <property name="icon">
+               <iconset resource="Resources.qrc">
+                <normaloff>:/images/icons/payment.png</normaloff>:/images/icons/payment.png</iconset>
+              </property>
+              <property name="iconSize">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_15">
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_30">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfPays">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Number Of Payments</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfPending">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Number Of Pending</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfFulfilled">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>Number Of Fulfilled</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_31">
+              <property name="leftMargin">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>10</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfPaysStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfPendingStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="PaymentsInNumberOfFulfilledStatus">
+                <property name="styleSheet">
+                 <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                </property>
+                <property name="text">
+                 <string>0</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_16">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_20">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_21">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="PaymentsInMonthlyLabel">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Monthly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_33">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="PaymentsInPreviewsMonthly">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&lt;&lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="PaymentsInMonthlyStatus">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Monthly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="PaymentsInnextMonthly">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&gt;&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_17">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_22">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_34">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>5</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="PaymentsInYearlyLabel">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Yearly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_35">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="PaymentsInPreviewsYearly">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&lt;&lt;</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="PaymentsinYearlyStatus">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Yearly Report</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="PaymentsInNextYearly">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>&gt;&gt;</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="Line" name="line_18">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>1</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color:white;</string>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_23">
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_36">
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="label_10">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: transparent;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;</string>
+                  </property>
+                  <property name="text">
+                   <string>Note</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QPlainTextEdit" name="PaymentsInPlainText">
+                <property name="styleSheet">
+                 <string notr="true">background-color: rgb(54, 54, 54);
+color: white;
+padding: 4px;</string>
+                </property>
+                <property name="placeholderText">
+                 <string>Write note here...</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <property name="leftMargin">
+               <number>3</number>
+              </property>
+              <property name="topMargin">
+               <number>3</number>
+              </property>
+              <property name="rightMargin">
+               <number>3</number>
+              </property>
+              <property name="bottomMargin">
+               <number>3</number>
+              </property>
+              <item>
+               <spacer name="horizontalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QPushButton" name="PaymentsInManagePayed">
+                <property name="styleSheet">
+                 <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px; /* Padding around text */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+    font-size: 14px; /* Text size */
+
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border: 2px solid white; /* White left border */
+}</string>
+                </property>
+                <property name="text">
+                 <string>Manage Payement</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4"/>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

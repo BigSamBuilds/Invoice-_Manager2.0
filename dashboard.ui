@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dashboard</class>
+ <widget class="QMainWindow" name="Dashboard">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1462</width>
+    <height>914</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dashboard</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/images/Icon.png</normaloff>:/images/Icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(46, 47, 48)</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayoutMain">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="Menu" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>280</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">background-color:rgb(21, 47, 89)</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <item>
+            <spacer name="verticalSpacer_2">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>30</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="LogoStatus">
+             <property name="styleSheet">
+              <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                                        </string>
+             </property>
+             <property name="text">
+              <string>Stitch Alterations LTD</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Maximum</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>50</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Overview">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="statusTip">
+              <string extracomment="0"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/overview.png</normaloff>:/images/icons/overview.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Documents">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="2"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Documents</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/Documents.png</normaloff>:/images/icons/Documents.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="Section1">
+             <property name="styleSheet">
+              <string notr="true">color:white;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+                                                        </string>
+             </property>
+             <property name="text">
+              <string>  PAYABLES</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Items">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="1"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Items</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/Items.png</normaloff>:/images/icons/Items.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Vendors">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="3"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Vendors</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/Vendors.png</normaloff>:/images/icons/Vendors.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="PaymentOut">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="6"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Payments out</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/payment.png</normaloff>:/images/icons/payment.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="Section2">
+             <property name="styleSheet">
+              <string notr="true">color:white;
+font: 8pt &quot;MS Shell Dlg 2&quot;;
+                                                        </string>
+             </property>
+             <property name="text">
+              <string>  RECIVABLES</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Customers">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="7"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Customers</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/Vendors.png</normaloff>:/images/icons/Vendors.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Invoices">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="8"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Invoices</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/Documents.png</normaloff>:/images/icons/Documents.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="PaymentIn">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="9"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Payments in</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/payment.png</normaloff>:/images/icons/payment.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="Line" name="line">
+             <property name="maximumSize">
+              <size>
+               <width>300</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+                                                        </string>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="Analys">
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="statusTip">
+              <string extracomment="10"/>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton {
+    color: white; /* Default text color */
+    border: 2px solid transparent; /* Default border */
+    padding: 15px 32px; /* Padding around text */
+    text-align: left; /* Center text */
+    text-decoration: none; /* Remove underline from text */
+
+    font-size: 14px; /* Text size */
+    margin: 4px 2px; /* Margin around button */
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+    border-left: 2px solid white; /* White left border */
+}</string>
+             </property>
+             <property name="text">
+              <string>Analyse</string>
+             </property>
+             <property name="icon">
+              <iconset resource="Resources.qrc">
+               <normaloff>:/images/icons/analyze.png</normaloff>:/images/icons/analyze.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="Line" name="line_2">
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+                                                        </string>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Plain</enum>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="verticalSpacer_6">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Expanding</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QWidget" name="Board" native="true">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QStackedWidget" name="stackedPages">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="OverviewPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag0">
+             <property name="spacing">
+              <number>10</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>10</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="ItemsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>2</number>
+             </property>
+             <property name="topMargin">
+              <number>2</number>
+             </property>
+             <property name="rightMargin">
+              <number>2</number>
+             </property>
+             <property name="bottomMargin">
+              <number>2</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="DocumentsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="VendorsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="ApprovalsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="BillsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="PaymentsOutPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag6">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="CustomersPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag7">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="InvoicesPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag8">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="PaymentsInPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag9">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="AnalysePage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag10">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="SettingsPage">
+            <layout class="QVBoxLayout" name="qhboxlaoutPag11">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

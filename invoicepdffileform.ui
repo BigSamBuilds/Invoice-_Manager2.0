@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InvoicePDFFileForm</class>
+ <widget class="QWidget" name="InvoicePDFFileForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>867</width>
+    <height>1092</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Invoices Management</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="Resources.qrc">
+    <normaloff>:/images/Icon.png</normaloff>:/images/Icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background: white;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>10</number>
+   </property>
+   <property name="leftMargin">
+    <number>10</number>
+   </property>
+   <property name="topMargin">
+    <number>10</number>
+   </property>
+   <property name="rightMargin">
+    <number>10</number>
+   </property>
+   <property name="bottomMargin">
+    <number>10</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="headerLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <widget class="QLabel" name="companyNameLabel">
+       <property name="font">
+        <font>
+         <family>Alegreya SC</family>
+         <pointsize>28</pointsize>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: blue;
+font: 28pt &quot;Alegreya SC&quot;;
+font-weight: bold;</string>
+       </property>
+       <property name="text">
+        <string>Stitch Alterations LTD</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="topDetailsLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetDefaultConstraint</enum>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="leftDetailsLayout">
+       <property name="spacing">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLineEdit" name="addressLineEdit">
+         <property name="styleSheet">
+          <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Address</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="postnumberLineEdit">
+         <property name="styleSheet">
+          <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Post Number</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetFixedSize</enum>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>VAT Number:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="vat_numberQlineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>VAT 1234...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Mobile:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="mobileQLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>0123241...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Phone:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="phone_QLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>076564...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="email_QLineEdit">
+         <property name="styleSheet">
+          <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Email@example.com</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="website_QLineEdit">
+         <property name="styleSheet">
+          <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+         </property>
+         <property name="placeholderText">
+          <string>www.example.com</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="rightDetailsLayout">
+       <item>
+        <layout class="QHBoxLayout" name="dateLayout">
+         <item>
+          <widget class="QLabel" name="dateLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Date:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="dateLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>24/2/2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="invoiceNumberLayout">
+         <item>
+          <widget class="QLabel" name="invoiceNumberLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Invoice Number:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="invoiceNumberLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>S123...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="billToLayout">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="billToLabel">
+               <property name="styleSheet">
+                <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+               </property>
+               <property name="text">
+                <string>Bill To:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextEdit" name="billToTextEdit">
+               <property name="maximumSize">
+                <size>
+                 <width>16777215</width>
+                 <height>120</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+               </property>
+               <property name="placeholderText">
+                <string>Jon Doe</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QTableView" name="tableView">
+       <property name="cursor" stdset="0">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* QTableView */
+QTableView {
+    border: 1px solid rgb(121, 121, 122); /* Dark border */
+    background-color: rgb(255, 255, 255); /* White background */
+    color: black; /* Black text */
+    font: 12pt &quot;Segoe UI&quot;; /* Font */
+}
+
+/* QHeaderView::section (column headers) */
+QHeaderView::section {
+    background-color: rgb(52, 73, 94); /* Blue header background */
+    color: #FFFFFF; /* White text */
+    padding: 2px;
+    border: 1px solid rgb(66, 67, 68); /* Blue border */
+    font: bold 12pt &quot;Segoe UI&quot;; /* Bold font */
+}
+
+/* QTableView::item (table cells) */
+QTableView::item {
+    padding: 2px;
+    border: none;
+    color: black; /* Black font color */
+}
+
+/* QTableView::item:selected (selected cells) */
+QTableView::item:selected {
+    background-color: rgb(192, 192, 192); /* Light gray for selected cells */
+    color: black; /* Black font color for selected cells */
+}
+
+/* Alternate row colors */
+QTableView::item:alternate {
+    background-color: rgb(226, 226, 226); /* Light gray for alternate rows */
+}
+
+/* QTableView::item:focus (focused cells) */
+QTableView::item:focus {
+    background-color: rgb(192, 192, 192); /* Light gray for focused cells */
+    color: black; /* Black font color for focused cells */
+}
+
+QLineEdit {
+    color: black; /* Black text in QLineEdit */
+}
+
+QScrollBar:vertical, QScrollBar:horizontal {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    width: 14px;
+    margin: 15px 0 15px 0;
+    border-radius: 0px;
+}
+
+/* HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical, QScrollBar::handle:horizontal {
+    background-color: gray; /* Gray handle bar */
+    min-height: 30px;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical:hover, QScrollBar::handle:horizontal:hover {
+    background-color: darkgray; /* Darker gray on hover */
+}
+
+QScrollBar::handle:vertical:pressed, QScrollBar::handle:horizontal:pressed {
+    background-color: darkgray; /* Darker gray on press */
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical, QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover, QScrollBar::sub-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.458);
+}
+
+QScrollBar::sub-line:vertical:pressed, QScrollBar::sub-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical, QScrollBar::add-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover, QScrollBar::add-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+QScrollBar::add-line:vertical:pressed, QScrollBar::add-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.434);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal {
+    background: none;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}
+</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderStretchLastSection">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomDetailsLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetFixedSize</enum>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="leftBottomLayout">
+       <item>
+        <layout class="QHBoxLayout" name="accountLayout">
+         <item>
+          <widget class="QLabel" name="accountLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Account:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="accountLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>1234..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacerLeft1">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="sortCodeLayout">
+         <item>
+          <widget class="QLabel" name="sortCodeLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Sort Code:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="sortCodeLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>123456..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="bankLayout">
+         <item>
+          <widget class="QLabel" name="bankLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Bank:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="bankLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="placeholderText">
+            <string>123456..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="bankAddressTextEdit">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>60</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Bank Address</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="rightBottomLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="subtotalLayout">
+         <item>
+          <widget class="QLabel" name="subtotalLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Subtotal: £</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="subtotalLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>123456...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="vatLayoutBottom">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="vatBottomLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>VAT: £</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="vatPercentLineEdit">
+           <property name="maximumSize">
+            <size>
+             <width>50</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>Percent</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="percentLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>%   </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="vatAmountLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>12312..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="discountLayout">
+         <item>
+          <widget class="QLabel" name="discountLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Discount: %</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="discountLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>12341234..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="totalDiscountLayout">
+         <item>
+          <widget class="QLabel" name="totalDiscountLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Total Discount: £</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="totalDiscountLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>234</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacerRight1">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="totalLayout">
+         <item>
+          <widget class="QLabel" name="totalLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Total: £</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="totalLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>234234..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="balanceDueLayout">
+         <item>
+          <widget class="QLabel" name="balanceDueLabel">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="text">
+            <string>Balance Due: £</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="balanceDueLineEdit">
+           <property name="styleSheet">
+            <string notr="true">color: black;
+font: 10pt &quot;MS Shell Dlg 2&quot;;
+background-color: transparent;
+border: none;
+font-weight: bold;</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="placeholderText">
+            <string>123123..</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <property name="leftMargin">
+      <number>10</number>
+     </property>
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <property name="rightMargin">
+      <number>10</number>
+     </property>
+     <property name="bottomMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="SaveInfo">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(67, 67, 67);
+	color: white;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 0, 0);
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Save your information</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="PrintSaveButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(67, 67, 67);
+	color: white;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 0, 0);
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Print This Page as PDF</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="SaveTheInvoice">
+       <property name="styleSheet">
+        <string notr="true">QPushButton{
+	background-color: rgb(67, 67, 67);
+	color: white;
+}
+
+QPushButton:hover{
+	background-color: rgb(0, 0, 0);
+	color: white;
+}</string>
+       </property>
+       <property name="text">
+        <string>Save To Documents</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="Resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

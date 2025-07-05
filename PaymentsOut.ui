@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VendorsForm</class>
+ <widget class="QWidget" name="VendorsForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1166</width>
+    <height>1015</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #2d2d2d; color: white;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutMain">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>1</number>
+   </property>
+   <property name="rightMargin">
+    <number>1</number>
+   </property>
+   <property name="bottomMargin">
+    <number>1</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutTop">
+     <property name="topMargin">
+      <number>10</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="statusLabel">
+       <property name="styleSheet">
+        <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+       </property>
+       <property name="text">
+        <string>Payments Out</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Expanding</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RefreshPaymentsOutBtn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(4, 255, 0, 30); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(12, 255, 0); /* White left border */
+                        }</string>
+       </property>
+       <property name="text">
+        <string>Refresh</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="InsertNewRowVendors">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(4, 255, 0, 30); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(12, 255, 0); /* White left border */
+                        }</string>
+       </property>
+       <property name="text">
+        <string>Insert New Row</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="DeleteCurrentRowVendors">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(255, 0, 0, 0.1); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(126, 0, 0); /* White left border */
+                        }</string>
+       </property>
+       <property name="text">
+        <string>Delete Current Row</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="searchButton">
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+                                color: white; /* Default text color */
+                                border: 2px solid transparent; /* Default border */
+                                background-color: rgba(255, 255, 255, 0.1);
+                                padding: 15px 32px; /* Padding around text */
+                                text-align: left; /* Center text */
+                                text-decoration: none; /* Remove underline from text */
+                                font-size: 14px; /* Text size */
+
+                            }
+
+                            QPushButton:hover {
+                                background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+                                border-bottom: 2px solid white; /* White left border */
+                            }</string>
+       </property>
+       <property name="text">
+        <string>Search</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="searchLineEdit">
+       <property name="minimumSize">
+        <size>
+         <width>250</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>250</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: transparent;
+border: none;
+    border-bottom: 1px solid white;
+border-right : 5px solid transparent;
+    color: white;
+        padding: 12px;
+    background-color: transparent;
+    font-size: 16px;</string>
+       </property>
+       <property name="placeholderText">
+        <string>Enter vendor name...</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayoutTables">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayoutVendors">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="scrollAreaVendors">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContentsVendors">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1158</width>
+            <height>406</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutScrollVendors">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QTableView" name="VendorsTableView">
+             <property name="styleSheet">
+              <string notr="true">/* QTableView */
+QTableView {
+    border: 1px solid rgb(121, 121, 122);
+    /* Dark border */
+    background-color: #2C3E50;
+    /* Dark background */
+    color: #FFFFFF;
+    /* White text */
+    font: 12pt &quot;Segoe UI&quot;;
+    /* Font */
+}
+
+/* QHeaderView::section (column headers) */
+QHeaderView::section {
+    background-color: rgb(66, 67, 68);
+    /* Blue header background */
+    color: #FFFFFF;
+    /* White text */
+    padding: 2px;
+    border: 1px solid rgb(66, 67, 68);
+    /* Blue border */
+    font: bold 12pt &quot;Segoe UI&quot;;
+    /* Bold font */
+}
+
+/* QTableView::item (table cells) */
+QTableView::item {
+    padding: 2px;
+    border: none;
+}
+
+/* QTableView::item:selected (selected cells) */
+QTableView::item:selected {
+    background-color: rgb(66, 67, 68);
+    /* Lighter blue for selected cells */
+    color: #FFFFFF;
+}
+
+/* Alternate row colors */
+QTableView::item:alternate {
+    background-color: #34495E;
+    /* Darker blue for alternate rows */
+}
+
+
+/* QTableView::item (table cells) */
+QTableView::item {
+    padding: 2px;
+    border: none;
+    color: #FFFFFF;
+    /* Default font color (white) */
+}
+
+
+
+/* QTableView::item:selected (selected cells) */
+QTableView::item:selected {
+    background-color: #43525c;
+    /* Lighter blue for selected cells */
+    color: #FFFFFF;
+    /* White font color for selected cells */
+}
+
+/* QTableView::item:focus (focused cells) */
+QTableView::item:focus {
+    background-color: #4b5963;
+    /* Lighter blue for focused cells */
+    color: #FFFFFF;
+    /* White font color for focused cells */
+}
+
+QLineEdit {
+    color: white;
+}
+
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    width: 14px;
+    margin: 15px 0 15px 0;
+    border-radius: 0px;
+
+}
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background-color: rgba(255, 255, 255, 0.472);
+    min-height: 30px;
+    border-radius: 7px;
+
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.732);
+}
+
+QScrollBar::handle:vertical:pressed,
+QScrollBar::handle:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,
+QScrollBar::sub-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.458);
+}
+
+QScrollBar::sub-line:vertical:pressed,
+QScrollBar::sub-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical,
+QScrollBar::add-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover,
+QScrollBar::add-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+QScrollBar::add-line:vertical:pressed,
+QScrollBar::add-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.434);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal {
+    background: none;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayoutItemsBought">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>15</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="itemsBoughtLabel">
+           <property name="styleSheet">
+            <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+           </property>
+           <property name="text">
+            <string>Items Bought from Vendors</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="RefreshItemBoguthItemBtn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(4, 255, 0, 30); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(12, 255, 0); /* White left border */
+                        }</string>
+           </property>
+           <property name="text">
+            <string>Refresh</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="InsertNewRowItems">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(4, 255, 0, 30); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(12, 255, 0); /* White left border */
+                        }</string>
+           </property>
+           <property name="text">
+            <string>Insert New Row</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="DeleteCurrentRowItems">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+                            color: white; /* Default text color */
+                            border: 2px solid transparent; /* Default border */
+                            background-color: rgba(255, 255, 255, 0.1);
+                            padding: 15px 32px; /* Padding around text */
+                            text-align: Center; /* Center text */
+                            text-decoration: none; /* Remove underline from text */
+                            font-size: 14px; /* Text size */
+
+                        }
+
+                        QPushButton:hover {
+                            background-color: rgba(255, 0, 0, 0.1); /* White background with 50% opacity */
+                            border-bottom: 2px solid rgb(126, 0, 0); /* White left border */
+                        }</string>
+           </property>
+           <property name="text">
+            <string>Delete Current Row</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="VendorsItemSearchButton">
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+                                color: white; /* Default text color */
+                                border: 2px solid transparent; /* Default border */
+                                background-color: rgba(255, 255, 255, 0.1);
+                                padding: 15px 32px; /* Padding around text */
+                                text-align: left; /* Center text */
+                                text-decoration: none; /* Remove underline from text */
+                                font-size: 14px; /* Text size */
+
+                            }
+
+                            QPushButton:hover {
+                                background-color: rgba(255, 255, 255, 0.3); /* White background with 50% opacity */
+                                border-bottom: 2px solid white; /* White left border */
+                            }</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="VendorsSearchEditLine">
+           <property name="minimumSize">
+            <size>
+             <width>250</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>250</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background: transparent;
+border: none;
+    border-bottom: 1px solid white;
+border-right : 5px solid transparent;
+    color: white;
+        padding: 12px;
+    background-color: transparent;
+    font-size: 16px;</string>
+           </property>
+           <property name="placeholderText">
+            <string>Enter Item name...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>10</number>
+         </property>
+         <property name="rightMargin">
+          <number>10</number>
+         </property>
+         <property name="bottomMargin">
+          <number>10</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="VendorsIDStatus">
+           <property name="styleSheet">
+            <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+           </property>
+           <property name="text">
+            <string>ID:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="VendorsNameStatus">
+           <property name="styleSheet">
+            <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+           </property>
+           <property name="text">
+            <string>Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="VendorsRecentChangesStatus">
+           <property name="styleSheet">
+            <string notr="true">color: white; font: 75 13pt &quot;MS Shell Dlg 2&quot;;
+                                margin: 4px 2px; /* Margin around button */
+                                                                        </string>
+           </property>
+           <property name="text">
+            <string>Recent Changes: </string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollAreaItemsBought">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>400</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContentsItemsBought">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1160</width>
+            <height>400</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutScrollItemsBought">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>15</number>
+           </property>
+           <item>
+            <widget class="QTableView" name="ItemBoughtTableView">
+             <property name="styleSheet">
+              <string notr="true">/* QTableView */
+QTableView {
+    border: 1px solid rgb(121, 121, 122);
+    /* Dark border */
+    background-color: #2C3E50;
+    /* Dark background */
+    color: #FFFFFF;
+    /* White text */
+    font: 12pt &quot;Segoe UI&quot;;
+    /* Font */
+}
+
+/* QHeaderView::section (column headers) */
+QHeaderView::section {
+    background-color: rgb(66, 67, 68);
+    /* Blue header background */
+    color: #FFFFFF;
+    /* White text */
+    padding: 2px;
+    border: 1px solid rgb(66, 67, 68);
+    /* Blue border */
+    font: bold 12pt &quot;Segoe UI&quot;;
+    /* Bold font */
+}
+
+/* QTableView::item (table cells) */
+QTableView::item {
+    padding: 2px;
+    border: none;
+}
+
+/* QTableView::item:selected (selected cells) */
+QTableView::item:selected {
+    background-color: rgb(66, 67, 68);
+    /* Lighter blue for selected cells */
+    color: #FFFFFF;
+}
+
+/* Alternate row colors */
+QTableView::item:alternate {
+    background-color: #34495E;
+    /* Darker blue for alternate rows */
+}
+
+
+/* QTableView::item (table cells) */
+QTableView::item {
+    padding: 2px;
+    border: none;
+    color: #FFFFFF;
+    /* Default font color (white) */
+}
+
+
+
+/* QTableView::item:selected (selected cells) */
+QTableView::item:selected {
+    background-color: #43525c;
+    /* Lighter blue for selected cells */
+    color: #FFFFFF;
+    /* White font color for selected cells */
+}
+
+/* QTableView::item:focus (focused cells) */
+QTableView::item:focus {
+    background-color: #4b5963;
+    /* Lighter blue for focused cells */
+    color: #FFFFFF;
+    /* White font color for focused cells */
+}
+
+QLineEdit {
+    color: white;
+}
+
+QScrollBar:vertical,
+QScrollBar:horizontal {
+    border: none;
+    background: rgba(255, 255, 255, 0);
+    width: 14px;
+    margin: 15px 0 15px 0;
+    border-radius: 0px;
+
+}
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical,
+QScrollBar::handle:horizontal {
+    background-color: rgba(255, 255, 255, 0.472);
+    min-height: 30px;
+    border-radius: 7px;
+
+}
+
+QScrollBar::handle:vertical:hover,
+QScrollBar::handle:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.732);
+}
+
+QScrollBar::handle:vertical:pressed,
+QScrollBar::handle:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.767);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical,
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical:hover,
+QScrollBar::sub-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.458);
+}
+
+QScrollBar::sub-line:vertical:pressed,
+QScrollBar::sub-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical,
+QScrollBar::add-line:horizontal {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    height: 15px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::add-line:vertical:hover,
+QScrollBar::add-line:horizontal:hover {
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+QScrollBar::add-line:vertical:pressed,
+QScrollBar::add-line:horizontal:pressed {
+    background-color: rgba(255, 255, 255, 0.434);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical,
+QScrollBar::down-arrow:vertical,
+QScrollBar::up-arrow:horizontal,
+QScrollBar::down-arrow:horizontal {
+    background: none;
+}
+
+QScrollBar::add-page:vertical,
+QScrollBar::sub-page:vertical,
+QScrollBar::add-page:horizontal,
+QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <attribute name="horizontalHeaderStretchLastSection">
+              <bool>true</bool>
+             </attribute>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

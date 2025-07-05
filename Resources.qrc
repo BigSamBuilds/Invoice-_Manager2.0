@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>LoginBackground.jpg</file>
+        <file>Icon.png</file>
+        <file>IconW.png</file>
+        <file>IconW1.png</file>
+        <file>LoginBackground0.2.jpg</file>
+        <file>icons/overview.png</file>
+        <file>icons/Items.png</file>
+        <file>icons/Documents.png</file>
+        <file>icons/Vendors.png</file>
+        <file>icons/approval.png</file>
+        <file>icons/payment.png</file>
+        <file>icons/analyze.png</file>
+        <file>icons/settings.png</file>
+        <file>cubic2.gif</file>
+    </qresource>
+</RCC>
